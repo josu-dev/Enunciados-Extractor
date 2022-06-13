@@ -4,7 +4,7 @@ from statements import multiple_choice
 SOURCE_FOLDER = 'pdfs'
 OUTPUT_FOLDER = helpers.join_path(helpers.dirname(__file__), 'jsons')
 
-for file_name, path in helpers.scan_dir(SOURCE_FOLDER, '.txt'):
+for file_name, path in helpers.scan_dir(SOURCE_FOLDER, '.text'):
     with open(path, mode='r', encoding='utf-8') as file:
         content = ''.join(file.readlines())
     result = multiple_choice.parse(content)
