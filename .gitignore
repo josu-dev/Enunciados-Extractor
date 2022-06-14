@@ -1,0 +1,12 @@
+.env
+__pycache__
+
+_old/
+test
+test.*
+*.test.*
+
+input/*
+!input/example.*
+output/*
+!output/example.*
