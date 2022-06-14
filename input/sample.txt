@@ -1,0 +1,807 @@
+NOTA:  
+· La primera mitad del archivo contiene preguntas recuperadas de distintos PDF y 
+fotos de exámenes viejos (2011, 2012, 2017, 2019, entre otros) y sus respuestas 
+PODRÍAN no ser correctas. 
+Una  respuesta  solo  entre  paréntesis  significa  que  en  la  fuente  de  donde  se 
+obtuvo, esa respuesta ya estaba marcada como correcta. 
+Una  respuesta  entre  paréntesis  con  un  asterisco  o  signo  de  pregunta  implica 
+una respuesta dada por quienes armamos este archivo. 
+En cualquier caso, no se asegura 100% que sea correcta. 
+ 
+ 
+·  La  segunda  mitad  (separado  por  una  página  en  blanco)  son  exámenes  2021, 
+cuyas respuestas están determinadas por Moodle, y es 100% confiable 
+estudiarlas. 
+ 
+ 
+ 
+  
+ 
+ 
+Parte I  
+ 
+ 
+ 
+Archivos  
+ 
+ 
+ 
+1) Los archivos con registros de longitud variable: 
+a. Ocupan menos espacio que los registros con long. fija 
+b. Ocupan más espacio que los registros con long. fija 
+c. Ocupan el mismo espacio que los registros con long. Fija 
+d. Ninguna de las anteriores 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(d) 
+ 
+ 
+2) Un algoritmo de búsqueda en un archivo: 
+a. Es más eficiente si el archivo está ordenado 
+b. Puede ser más eficiente si se considera como precondición que el archivo está ordenado. 
+c. Es igual de eficiente si el archivo está ordenado o desordenado. 
+d. Ninguna de las anteriores 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(b) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+3) El proceso de merge de archivos: 
+a. Requiere que todos los archivos estén ordenados 
+b. Requiere que todos los archivos estén ordenados por el mismo criterio 
+c. Puede hacerse sin los archivos ordenados 
+d. No puede realizarse sin los archivos ordenados 
+e. Algunas de las anteriores 
+f. Ninguna de las anteriores 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(c) 
+ 
+ 
+ 
+ 
+4) El proceso de alta de un registro por ajuste óptimo: 
+a. Se puede realizar con registros de long fija 
+b. Se debe realizar con registros de long fija 
+c. Se puede realizar con registros de long variable 
+d. Se debe realizar con registros de long variable (decía “long fija”) 
+e. Ninguna 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(e) 
+ 
+ 
+ 
+5) La operación assign: 
+a. Se utiliza para abrir un archivo 
+b. Se utiliza para posicionarse en el primer registro del archivo 
+c. Vincula el archivo lógico con el archivo físico 
+d. Se utiliza para saber la longitud del archivo 
+e. Algunas de las anteriores 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(c) 
+ 
+ 
+ 
+6) A partir del NRR: 
+a. Se puede acceder a un registro de un archivo fragmentado en un sólo acceso 
+b. Se puede acceder a un registro de un archivo no fragmentado en un sólo acceso 
+c. Se puede acceder a un registro de un archivo en un sólo acceso 
+d. Se puede lograr acceso directo a un archivo 
+e. Todas las anteriores 
+f. Algunas de las anteriores 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(e) 
+ 
+ 
+ 
+7) Un archivo fragmentado: 
+a. Debe compactarse para optimizar el espacio utilizado 
+b. No debe compactarse para optimizar el espacio utilizado 
+c. A veces puede compactarse 
+d. Nunca debe compactarse 
+e. Algunas de las anteriores 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(c) 
+ 
+ 
+ 
+8) Un algoritmo de actualización maestro-detalles 
+ 
+ 
+a. Requiere que todos los archivos tengan la misma estructura 
+b. Puede realizarse entre archivos con diferente estructura 
+c. Requiere que los archivos estén ordenados 
+d. Requiere que los archivos estén desordenados 
+e. Algunas de las anteriores 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(b)
+Árboles  
+1) Una estructura de tipo árbol: 
+a. Siempre tiene eficiencia de búsqueda logarítmica 
+b. Algunas veces tiene eficiencia de búsqueda constante 
+c. Si es B+ algunas veces tiene eficiencia de búsqueda logarítmica 
+d. Algunas de las anteriores 
+e. Ninguna de las anteriores 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(e) ¿?????? ‘b.’ si la raíz tiene una sola clave?  
+ 
+ 
+ 
+2) Un B*: 
+a. Se construye de manera similar a un árbol binario, salvo que en los nodos cabe más de un elemento 
+b. Se construye de manera similar a un árbol B 
+c. puede ser la estructura superior (separadores) de un árbol B+ 
+e. algunas 
+f. ninguna 
+ 
+ 
+ 
+ 
+ 
+ 
+(c) 
+ 
+ 
+ 
+3) Un índice implementado con una lista invertida 
+a. Debe proveer acceso rápido (Eficiente) a un registro 
+b puede proveer a acceso rápido (Eficiente) a un registro 
+c Debe proveer acceso secuencial rápido (Eficiente) a todos los registros 
+d. puede proveer acceso secuencial rápido (Eficiente. a todos los registros 
+e. todas 
+f. algunas 
+g. ninguna 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(f) (a y c?) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+4) Sea un árbol B de orden 100, el nodo X tiene 49 elementos, si se borra un 
+elemento de dicho nodo 
+a. solo se borra el elemento 
+b. se produce underflow y se debe concatenar el nodo x 
+c. se prduce underflow y se debe redistribuir el nodo x 
+d. todas 
+e. algunas 
+f. ninguna 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(f) 
+ 
+ 
+ 
+ 
+ 
+5) Se tiene un árbol B+ de orden M. Suponga que se haya utilizado una de las claves como separador. Si la 
+clave se borra 
+a. se debe borrar el separador 
+b. se puede borrar el separador 
+c. no se toca el separador 
+d. algunas 
+e. ninguna 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(c) 
+ 
+ 
+ 
+ 
+ 
+ 
+6) Se definen 4 índices para un archivo de datos. Dichos índices se 
+implementan con árboles balanceados 
+a. la eficiencia de los 4 árboles es de orden similar, es decir, orden lineal 
+b. los 4 árboles tienen una eficiencia en términos matemáticos igual 
+c. alguno de los árboles puede ser más eficiente que otro en términos matemáticos 
+d. todas 
+e. algunas 
+f. ninguna 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(c) 
+ 
+ 
+7) Sea un arbol B+ de orden M 
+a. ante una insercion se puede producir division 
+b. ante una inserción con overflow siempre se produce división 
+c. ante una inserción con onverflow siempre se produce redistribución. 
+d. todas 
+e. algunas 
+f. ninguna 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(a) (e? a y b) 
+ 
+ 
+8) Un árbol B+ de orden M 
+a. es un árbol multicamino 
+b. es un árbol balanceado 
+c. Es un árbol que en cada nodo (salvo la raíz) tiende a llenarse en al menos ⅔ 
+d. algunas 
+e. ninguna 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(d) (a, b?) 
+ 
+ 
+ 
+9) Un árbol binario de orden 4 
+a. puede desbalancearse 
+b. puede balancearse 
+c. si se emplean los algoritmos correctos puede quedar balanceado en altura 
+d. si está desbalanceado no puede presentar una eficiencia de búsqueda de 
+orden logarítmica 
+e. todas 
+f. algunas 
+g. no corresponde 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(g) 
+ 
+ 
+ 
+10) Si se implementa un algoritmo que permita generar un árbol B+, ese algoritmo: 
+a. no necesita manipular el puntero al nodo raíz 
+b. no necesita manipular el puntero al nodo de los elementos de datos menores 
+c. la estructura interna del árbol puede implementarse como B* 
+d. todas 
+e. algunas 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(c) 
+ 
+ 
+ 
+11) Cuando se realiza un alta en un árbol B 
+a. se puede realizar en un nodo interno 
+b. siempre se produce overflow 
+c. puede llegar a necesitar realizar una fusión de nodos 
+d. siempre se llega hasta el nivel hoja 
+e. ninguna 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(d) 
+ 
+ 
+ 
+12) Cuáles propiedades corresponden a un árbol B+ de prefijos simples 
+a. cada nodo puede tener como máximo M descendientes, siendo M el orden del árbol 
+b. un nodo que tiene x descendientes debe tener x-1 claves 
+c. está siempre balanceado, sin importar los elementos que se inserten 
+d. todas las anteriores 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(d) 
+ 
+ 
+ 
+13) La eficiencia promedio de búsqueda en un árbol B tiene 
+a. orden lineal 
+b. orden logarítmico 
+c. orden constante 
+d. ninguna 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(b) 
+ 
+ 
+ 
+14) En un árbol B de orden 50, cuando quedan 25 elementos en un nodo: 
+a. Se produce underflow y necesariamente debe concatenarse con un adyacente hermano 
+b. Se produce underflow y necesariamente debe redistribuirse con un adyacente hermano 
+ 
+ 
+c. Se produce underflow y la operación a realizar depende del estado de los nodos adyacentes hermanos 
+d. no se produce underflow 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(d) 
+ 
+ 
+ 
+15) un índice primario es: 
+a. una estructura de datos adicional que contiene el mismo volumen de información que el archivo original 
+b. una estructura de datos adicional que permite ordenar físicamente el archivo original 
+c. una estructura de datos adicional que agilizar el acceso a la información del archivo 
+d. una estructura de datos adicional que puede contener mayor volumen de información que el archivo original 
+e. ninguna 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(c)
+
+Hashing  
+1) La DE: 
+a. es un parámetro de eficiencia en cualquier tipo de hashing 
+b. es un parámetro de eficiencia sólo para un tipo de hashing 
+c. permite detectar si la cantidad de espacio libre en el archivo puede crecer 
+d. permite detectar si la cantidad de elementos del archivo puede crecer 
+e. algunas 
+f. ninguna 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(b) (e* b y d*) 
+ 
+ 
+ 
+2) Una colisión: 
+a. puede no ocurrir si hay al menos dos claves sinónimos para una función de hashing 
+b. puede ocurrir si hay al menos dos claves sinónimos para una función de hashing 
+c. puede utilizar un algoritmo para tratamiento de registros en saturación 
+d. puede no utilizar un algoritmo para tratamiento de registros en saturación 
+e. todas 
+f. algunas 
+g. ninguna 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(f*) (*c y d) 
+(g?) 
+ 
+ 
+ 
+3) cuáles de los siguientes parámetros afecta la eficiencia de la dispersión: 
+a. cantidad de elementos del archivo 
+b. cantidad de espacio para almacenar el archivo 
+c. densidad de empaquetamiento 
+d. función de dispersión 
+e. algoritmos para el tratamiento de registros en saturación 
+f. todas 
+g. algunas 
+h. ninguna 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(f) 
+ 
+ 
+ 
+ 
+4) Si se quiere dispersar un archivo de 40.000 elementos: 
+a. se requiere un archivo de 40.000 cubetas 
+b. se requiere un archivo de al menos 40.000 cubetas 
+c. se requiere un archivo de menos de 40.000 
+d. todas 
+e. algunas 
+f. ninguna 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(f) 
+ 
+ 
+ 
+5) Si se dispone la DE de un archivo 
+a. siempre se puede calcular la cantidad probable de registros en saturación 
+b. no se puede calcular la cantidad probable de registros en saturación 
+c. si se calcula la cantidad probable de registros en saturación, la DE fue mayor que 1 
+d. si se calcula la cantidad probable de registros en saturación, la DE fue menor que 1 
+e. algunas 
+f. ninguna 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(f) 
+ 
+ 
+ 
+ 
+ 
+6) a partir de un archivo dispersado con hashing extensible: 
+a. siempre es posible agregar elementos al archivo 
+b. algunas veces es posible agregar elementos al archivo 
+c. se puede utilizar dispersión doble para tratar registros en saturación 
+d. no se puede utilizar saturación progresiva para tratar registros en saturación 
+e. algunas 
+f. ninguna 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(e) (a y d) 
+ 
+ 
+ 
+7) si se desea ordenar físicamente un archivo: 
+a. se puede usar hashing extensible 
+b. se puede utilizar dispersión doble para tratar registros en saturación 
+c. se puede utilizar saturación progresiva para tratar registros en saturación 
+d. se puede utilizar saturación progresiva encadenada para tratar registros en saturación 
+e. la DE debe ser menor o igual a 1 
+f. todas 
+g. algunas 
+h. ninguna 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(e)(h*) 
+ 
+ 
+ 
+ 
+8) el método de tratamiento de desbordes: 
+a. afecta la DE 
+b. puede afectar la DE 
+c. afecta la DE en casos especiales 
+d. afecta la DE en la mayoría de los casos 
+e. todas 
+f. algunas 
+ 
+ 
+g. ninguna 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(g) 
+ 
+ 
+ 
+9) una función de hash perfecta 
+a. es difícil de conseguir 
+b. necesita de un algoritmo para tratamiento de registros en saturación 
+c. puede tener menos del 1% de claves sinónimos 
+d. no tiene claves sinónimas 
+e. todas 
+f. algunas  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(d) 
+ 
+ 
+ 
+ 
+10) si ocurrió saturación 
+a. hubo colisión 
+b. no hubo colisión 
+c. pudo haber ocurrido colisión 
+d. hay más de 2 claves sinónimo 
+e. todas 
+f. algunas 
+g. ninguna 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(a) 
+ 
+ 
+ 
+11) Una colisión se produce: 
+a. Cuando dos registros diferentes obtienen de la función de hash la misma dirección de disco. 
+b. Cuando dos registros iguales obtienen de la función de hash direcciones diferentes de disco. 
+c. Cuando un registro no cabe en el lugar donde debe almacenarse de acuerdo al resultado de la función de 
+hash. 
+d. Cuando dos registros diferentes obtienen de la función de hash direcciones diferentes de disco. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(a) 
+ 
+ 
+ 
+12) La eficiencia promedio de búsqueda en un archivo a partir de estar organizado mediante política de 
+Hashing: 
+a). Orden Lineal 
+b. Orden logarítmico. 
+c. Orden Constante. 
+d. No dispongo de datos para contestar la pregunta. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(c) 
+ 
+ 
+ 
+13) La eficiencia de búsqueda de un registro en un archivo organizado mediante hashing estático tiene: 
+a. Orden Lineal 
+b. Algunas veces es uno 
+c. Siempre es uno 
+d. Orden Logarítmico. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(b)

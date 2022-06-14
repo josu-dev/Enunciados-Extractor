@@ -29,22 +29,37 @@ def recompose_text(text: str) -> str:
 
     return result
 
+def test(reader: PdfReader) -> None:
+    
+    for index, page in enumerate(reader.pages):
+        print(page.extract_text())
+        if index > 3:
+            break
 
 def main() -> None:
-    PDF_PATH = './pdfs/fod_largo.pdf'
+    PDF_PATH = './input/fod_corto_new2.pdf'
     MAX_SIZE = 5
-
-    pdf_reader = PdfReader(PDF_PATH)
+    file = open(PDF_PATH, mode='rb')
+    pdf_reader = PdfReader(file, False)
+    test(pdf_reader)
+    exit()
+    # print(pdf_reader.metadata)
     count = -1
     def my_func(_:Any) -> bool:
         nonlocal count
         count += 1
         return count < MAX_SIZE
     limited_pages = filter(my_func,pdf_reader.pages)
-    result = remove_bad_whitespace(map(lambda page: page.extract_text(), limited_pages))
-    print(result)
-    result = recompose_text(result)
-    print(result)
+    for page in limited_pages:
+        print(page.__dict__)
+        if '/Annots' in page:
+            annot = page['/Annots']
+            print(annot)
+        # print(f'{page.extract_text()}')
+    # result = remove_bad_whitespace(map(lambda page: page.extract_text(), limited_pages))
+    # print(result)
+    # result = recompose_text(result)
+    # print(result)
     
 
 if __name__ == '__main__':
