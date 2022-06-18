@@ -12,9 +12,12 @@ def main() -> None:
     for file_name, path in utils.scan_dir(const.PATH_INPUT, '.txt'):
         file_name = utils.normalize_name(file_name.split('.')[0])
         
-        with open(path, mode='r', encoding='utf-8') as file:
-            content = ''.join(file.readlines())
-
+        try:
+            with open(path, mode='r', encoding='utf-8') as file:
+                content = ''.join(file.readlines())
+        except:
+            continue
+        
         for index, parse in enumerate(parsers):
             result = parse(content)
             if not result:

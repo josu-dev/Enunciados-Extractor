@@ -29,7 +29,7 @@ Se requiere:
 
     Una vez abierta colocar los archivos de texto (estension .txt) que se quieren procesar en la carpeta ***input***
 
-    > En [Generar .txt](#generar-.txt)
+    > En [Generar txt](#generar-txt) hay ayuda para obtener archivos de texto de otros formatos
 
 1. Abrir una terminal en la misma carpeta
 
@@ -43,7 +43,7 @@ Se requiere:
 
 <br>
 
-## Generar .txt
+## Generar txt
 
 Si los datos de entrada no estan en formato de texto plano y no podes pasarlo a este, intenta con alguno de los siguientes metodos:
 
