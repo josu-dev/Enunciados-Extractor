@@ -29,3 +29,6 @@ def scan_dir(path: str, file_extension: str) -> list[tuple[str, str]]:
         (entry.name, entry.path)
         for entry in os.scandir(path) if entry.is_file() and entry.name.endswith(file_extension)
     ]
+
+def normalize_name(name:str) -> str:
+    return '_'.join(name.lower().split())

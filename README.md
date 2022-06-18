@@ -1,8 +1,8 @@
 # Enunciados Extractor
 
-Esta es una herramienta para reconocer y extraer enunciados desde archivos de texto con el objetivo de pasarlos a formato json para ser usados en alguna aplicacion que consuma los datos.
+Esta es una herramienta para reconocer y extraer enunciados desde archivos de texto plano con el objetivo de transformarlos a formato json para ser usados en otra aplicacion/herramienta que consuma estos datos.
 
-De momento solo se extraen los tipos:
+Se extraen los tipos:
 
 - Multiple choice
 - En un futuro pueden haber mas
@@ -11,7 +11,9 @@ De momento solo se extraen los tipos:
 
 ## Requerimientos
 
-Solo se necesita python >= 3.10
+Se requiere:
+
+- python >= 3.10
 
 <br>
 
@@ -43,7 +45,7 @@ Solo se necesita python >= 3.10
 
 ## Generar .txt
 
-Si tus datos no estan en formato de texto plano intenta usar alguno de los siguientes metodos:
+Si los datos de entrada no estan en formato de texto plano y no podes pasarlo a este, intenta con alguno de los siguientes metodos:
 
 - .pdf
 
