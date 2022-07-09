@@ -7,7 +7,14 @@ Se extraen los tipos:
 - Multiple choice
 - En un futuro pueden haber mas
 
-<br>
+Indice
+
+- [Requerimientos](#requerimientos)
+- [Como usar](#como-usar)
+- [Generar txt](#generar-txt)
+
+
+&nbsp;
 
 ## Requerimientos
 
@@ -15,7 +22,7 @@ Se requiere:
 
 - python >= 3.10
 
-<br>
+&nbsp;
 
 ## Como usar
 
@@ -41,7 +48,7 @@ Se requiere:
 
 1. El resultado del procesamiento se encontrara en la carpeta ***output***
 
-<br>
+&nbsp;
 
 ## Generar txt
 

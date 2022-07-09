@@ -23,10 +23,17 @@ def parse_statement(text: str) -> mc.Statement:
     )
 
 
-def parse(text: str) -> list[tuple[int, mc.Statement]]:
+def parse_enumerated(text: str) -> list[tuple[int, mc.Statement]]:
     result: list[tuple[int, mc.Statement]] = []
     for index, match in enumerate(re.finditer(R_STATEMENT, text, mc.FLAGS)):
         result.append(
             (index, parse_statement(match.group()))
         )
+    return result
+
+def parse(text: str) -> list[mc.Statement]:
+    result = [
+        parse_statement(match.group())
+        for match in re.finditer(R_STATEMENT, text, mc.FLAGS)
+    ]
     return result

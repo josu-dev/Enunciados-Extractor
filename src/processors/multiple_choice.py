@@ -6,7 +6,7 @@ from dataclasses import dataclass
 class Statement:
     sentence: str
     options: list[tuple[str, str]]
-    anwers: list[str]
+    answers: list[str]
 
 
 FLAGS = re.IGNORECASE | re.MULTILINE | re.UNICODE
@@ -63,10 +63,17 @@ def parse_statement(text: str) -> Statement:
     )
 
 
-def parse(text: str) -> list[tuple[int, Statement]]:
+def parse_enumerated(text: str) -> list[tuple[int, Statement]]:
     result: list[tuple[int, Statement]] = []
     for index, match in enumerate(re.finditer(R_STATEMENT, text, FLAGS)):
         result.append(
             (index, parse_statement(match.group()))
         )
+    return result
+
+def parse(text: str) -> list[Statement]:
+    result = [
+        parse_statement(match.group())
+        for match in re.finditer(R_STATEMENT, text, FLAGS)
+    ]
     return result
