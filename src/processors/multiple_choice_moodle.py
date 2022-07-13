@@ -17,9 +17,9 @@ def parse_statement(text: str) -> mc.Statement:
         return mc.Statement('', [], [])
 
     return mc.Statement(
-        match['sentence'].strip(),
+        mc.normalize_sentence(match['sentence']),
         mc.parse_options(match['options']),
-        [match['answer'].strip()]
+        [mc.normalize_answer(match['answer'])]
     )
 
 
@@ -30,6 +30,7 @@ def parse_enumerated(text: str) -> list[tuple[int, mc.Statement]]:
             (index, parse_statement(match.group()))
         )
     return result
+
 
 def parse(text: str) -> list[mc.Statement]:
     result = [
