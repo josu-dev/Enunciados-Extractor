@@ -1,20 +1,19 @@
 import json
 import os
+
 from typing import Any
 
-
-dirname = os.path.dirname
 
 join_path = os.path.join
 
 
-def ensure_dirs(path: str):
+def ensure_dirs(path: str) -> None:
     if not os.path.exists(path):
         os.makedirs(path, exist_ok=True)
 
 
 def save_json(path: str, value: Any, is_custom_class: bool = False, prettify: bool = False, write_mode: str = 'w') -> None:
-    ensure_dirs(dirname(path))
+    ensure_dirs(os.path.dirname(path))
 
     with open(path, mode=write_mode, encoding='utf-8') as file:
         def default(o: Any): return o.__dict__ if is_custom_class else None
@@ -31,5 +30,5 @@ def scan_dir(path: str, file_extension: str) -> list[tuple[str, str]]:
     ]
 
 
-def normalize_name(name: str) -> str:
+def normalize_file_name(name: str) -> str:
     return '_'.join(name.lower().split())

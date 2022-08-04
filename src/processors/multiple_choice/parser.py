@@ -1,5 +1,8 @@
 import re
 from dataclasses import dataclass
+from typing import Literal
+
+import flavors
 
 
 @dataclass
@@ -13,8 +16,7 @@ FLAGS = re.IGNORECASE | re.MULTILINE | re.UNICODE
 R_UNICODELETTERS = r'[^\W\d_]'
 R_MARKER = r'[\t .,_\-:)]'
 
-# TODO make that second spec of option no matches a digit/letter + marker sentence
-R_ANSWER = r' *(?P<answer>(\([^()\n]+\))|(^[^\d][^(\s][^()\n]+))'
+r_defs: flavors.Definition
 
 
 def normalize_answer(text: str) -> str:
@@ -30,7 +32,7 @@ def normalize_answer(text: str) -> str:
 
 def parse_answers(text: str) -> list[str]:
     answers: list[str] = []
-    for match in re.finditer(R_ANSWER, text, FLAGS):
+    for match in re.finditer(r_defs.ANSWER, text, FLAGS):
         answer = normalize_answer(match['answer'])
         if not answer:
             continue
@@ -38,25 +40,18 @@ def parse_answers(text: str) -> list[str]:
     return answers
 
 
-# other possible re r' *[^\W\d_] *[\t.,_\-:)]+ *(?P<option>[^\W\d_].+?(?=( [^\W\d_][._\-:)])|\n))'
-R_OPTION = r'^ *[^\W_][\t .,_\-:)]+(?P<option>[^\W\d_].+)'
-
-
 def parse_options(text: str) -> list[tuple[str, str]]:
     options: list[tuple[str, str]] = []
-    for index, match in enumerate(re.finditer(R_OPTION, text, FLAGS)):
+    for index, match in enumerate(re.finditer(r_defs.OPTION, text, FLAGS)):
         options.append(
             (chr(97 + index), match['option'].strip(' .'))
         )
     return options
 
 
-R_SENTENCE = r'^ *\d\w?[\t .,_\-:)]+(?P<sentence>[^\W\d_].+)'
-
-
 def parse_sentence(text: str) -> str:
     sentence = ''
-    match = re.match(R_SENTENCE, text, FLAGS)
+    match = re.match(r_defs.SENTENCE, text, FLAGS)
     if match:
         sentence = match['sentence'].strip()
         sentence = sentence[0].upper() + sentence[1:]
@@ -70,12 +65,8 @@ def normalize_sentence(text: str) -> str:
     return text[0].upper() + text[1:] if text else text
 
 
-R_STATEMENT = R_SENTENCE + \
-    r'\s*\n(?P<options>('+R_OPTION+r'\s*)+)\s*(?P<answers>('+R_ANSWER+r' *)*)?'
-
-
 def parse_statement(text: str) -> Statement:
-    match = re.match(R_STATEMENT, text, FLAGS)
+    match = re.match(r_defs.STATEMENT, text, FLAGS)
     if match is None:
         return Statement('', [], [])
 
@@ -86,18 +77,30 @@ def parse_statement(text: str) -> Statement:
     )
 
 
-def parse_enumerated(text: str) -> list[tuple[int, Statement]]:
-    result: list[tuple[int, Statement]] = []
-    for index, match in enumerate(re.finditer(R_STATEMENT, text, FLAGS)):
-        result.append(
-            (index, parse_statement(match.group()))
-        )
-    return result
-
-
-def parse(text: str) -> list[Statement]:
-    result = [
+def _parse(text: str, flavor: Literal['generic', 'moodle']) -> list[Statement]:
+    global r_defs
+    r_defs = flavors.definitions[flavor]
+    return [
         parse_statement(match.group())
-        for match in re.finditer(R_STATEMENT, text, FLAGS)
+        for match in re.finditer(r_defs.STATEMENT, text, FLAGS)
     ]
+
+
+def normalize_option_separetors(text: str) -> str:
+    result = text
+
+    for match in re.finditer(r' [a-l1-9][.-]', text, re.I):
+        result = result[0:match.start()] + '\n' + result[match.start()+1:]
     return result
+
+
+def parse(text: str, flavor: Literal[flavors.Flavors, 'all'] = 'all') -> list[Statement]:
+    text = normalize_option_separetors(text)
+    
+    if flavor == 'all':
+        return [
+            statement
+            for flavor_name in flavors.definitions
+            for statement in _parse(text, flavor_name)
+        ]
+    return _parse(text, flavor)
