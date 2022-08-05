@@ -88,15 +88,18 @@ def _parse(text: str, flavor: Literal['generic', 'moodle']) -> list[Statement]:
 
 def normalize_option_separetors(text: str) -> str:
     result = text
-
-    for match in re.finditer(r' [a-l1-9][.-]', text, re.I):
+    (r' [a-l1-9][.-]')
+    (r' [a-l1-9][.-] \
+        (?!( *\n)|( +[a-l1-9][.-])|[0-9])'
+    )
+    for match in re.finditer(r' [a-l1-9][.-](?!( *\n)|( +[a-l1-9][.-])|[0-9])', text, re.IGNORECASE):
         result = result[0:match.start()] + '\n' + result[match.start()+1:]
     return result
 
 
 def parse(text: str, flavor: Literal[flavors.Flavors, 'all'] = 'all') -> list[Statement]:
     text = normalize_option_separetors(text)
-    
+
     if flavor == 'all':
         return [
             statement
