@@ -34,7 +34,7 @@ Se requiere:
 
 1. Abrir la carpeta con el explorador de archivos
 
-    Una vez abierta colocar los archivos de texto (estension .txt) que se quieren procesar en la carpeta ***input***
+    Una vez abierta colocar los archivos de texto (extension .txt) que se quieren procesar en la carpeta ***input***
 
     > En [Generar txt](#generar-txt) hay ayuda para obtener archivos de texto de otros formatos
 

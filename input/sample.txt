@@ -1,0 +1,30 @@
+1- Un archivo con registro de logitud variable
+a-Puede estar ordenado por algun criterio
+b-Debe estar ordenado por algun criterio
+c-Nunca puede ordenarse por algun criterio
+d-Debe tener un caracter delimitador, por ej &
+e-Algunas de las anteriores
+f-Ninguna de las anteriores
+()
+2-Cuando se utiliza un algoritmo de merge
+a-Es necesario tener mas de un archivo al cual aplicarlo b-Es necesario que el archivo maestro sea de longitud fija
+c-Es necesario que el archivo detalle sea de longitud fija
+d-No necesariamente el archivo maestro quedara ordenado
+e-No es necesario que el archivo detalle este ordenado
+f-Todas
+g-Algunas
+()
+3-El proceso de baja logica
+a-Esta diseñado para borrar un registro de un archivo
+b-No necesita que el archivo este ordenado c-No necesita que el archivo este desordenado d-Se puede aplicar a archivos de longitud fija
+e-Se puede aplicar a archivos de longitud variable
+f-Todas
+g-Algunas
+()
+4-El algoritmo de actualizacion maestro-detalle
+a-Solo se puede implementar si los archivos estan ordenados
+b-Solo se puede implementar si el archivo maestro esta ordenado
+c-Solo se puede implementar si el archivos detalle esta ordenado d-Solo se puede implementar si los archivos estan desordenados
+e-Todas
+f-Ninguna g-Algunas
+()
